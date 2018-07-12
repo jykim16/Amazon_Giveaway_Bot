@@ -19,7 +19,7 @@ import time
 
 opts = Options()
 # comment out below if you want to see the browser UI 
-opts.set_headless()
+#opts.set_headless()
 browser = Chrome(options=opts)
 
 # site for amazon giveaway
