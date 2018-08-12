@@ -6,6 +6,12 @@
   - add downloaded executable to PATH
 - `pip install -r requirements.txt`
 
+## Setup Database
+- install MySQL
+- run `cp config.ini.default config.ini`
+- change config.ini file to match own user & pw
+- run `cd setup && python3 seed.py`
+
 ## Run
 - `python run_bot.py` or `python3 run_bot.py`
 - enter your amazon login and watch chromedriver enter bids
