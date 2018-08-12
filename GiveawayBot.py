@@ -1,5 +1,5 @@
-AMAZON_GIVEAWAY_LINK = 'https://www.amazon.com/b?ie=UTF8&node=16040174011'
-
+#AMAZON_GIVEAWAY_LINK = 'https://www.amazon.com/b?ie=UTF8&node=16040174011'
+AMAZON_GIVEAWAY_LINK = `https://www.amazon.com/ga/giveaways?pageId=${pageNumber}`
 
 # from selenium import webdriver
 # from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -31,7 +31,11 @@ class AmazonBot():
 
     def prime_giveaway(self):
         self.login()
-        self.select_giveaways()
+        self.enter_prime_giveaways()
+
+    def giveaway(self):
+        self.login()
+        self.enter_giveaways()
 
     def login(self):
         self.actions = ActionChains(self.browser)
@@ -41,7 +45,12 @@ class AmazonBot():
         self.browser.find_element_by_id('ap_password').send_keys(self.password) 
         self.browser.find_element_by_id('signInSubmit').click() 
 
-    def select_giveaways(self):
+    def enter_giveaways(self):
+        # get all giveaway items on page
+
+        
+        
+    def enter_prime_giveaways(self):
         # get all giveaway items
         items = self.browser.find_elements_by_class_name('bxc-grid-overlay__link')
 

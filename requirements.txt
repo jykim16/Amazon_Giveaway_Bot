@@ -2,3 +2,4 @@ pudb==2018.1
 Pygments==2.2.0
 selenium==3.13.0
 urwid==2.0.1
+SQLAlchemy==1.2.10
